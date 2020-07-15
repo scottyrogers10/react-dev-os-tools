@@ -4,6 +4,6 @@ export default (textAreaRef, hiddenTextAreaRef) => {
 
   if (textArea && hiddenTextArea) {
     const scrollHeight = hiddenTextArea.scrollHeight;
-    textArea.style.height = `${scrollHeight}px`;
+    textArea.style.height !== scrollHeight && (textArea.style.height = `${scrollHeight}px`);
   }
 };

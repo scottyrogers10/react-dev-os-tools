@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { View } from "@library/ui";
-import { useStore } from "@terminal/tools/hooks";
-import { setTextAreaHeight } from "./helpers";
+import { useStore } from "@@terminal/tools/hooks";
+import store from "@@terminal/store";
+import { executeCommand, setTextAreaHeight } from "./helpers";
 import styles from "./styles";
 
 const CommandLine = ({ style }) => {
@@ -16,10 +17,10 @@ const CommandLine = ({ style }) => {
   };
 
   const handleKeyDown = (event) => {
-    const enterKeyCode = 13;
-    const keyCode = event.keyCode;
-
-    if (keyCode === enterKeyCode) {
+    if (event.keyCode === 13) {
+      store.dispatch("history.addLine", { type: "COMMAND", value });
+      executeCommand(value);
+      setValue("");
       event.preventDefault();
     }
   };
