@@ -14,7 +14,11 @@
       "module-resolver",
       {
         "root": ["./src/"],
-        "alias": {}
+        "alias": {
+          "@devTools": "./src/dev-tools",
+          "@library": "./src/library",
+          "@terminal": "./src/dev-tools/terminal"
+        }
       }
     ]
   ]
