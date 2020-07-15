@@ -1,22 +1,24 @@
 import component from "@@terminal/component";
 import store from "@@terminal/store";
 
-const terminal = {
-  label: "Terminal",
-  configs: {
-    component,
-    size: { width: 700, height: 350 },
-    title: "Terminal",
-    type: "TERMINAL",
-    events: {
-      onResize: (dimensions) => store.dispatch("ui.resizeWidth", dimensions.size.width),
+const getTool = (commands = {}) => {
+  const terminalStore = store.create();
+
+  return {
+    label: "Terminal",
+    configs: {
+      component: (props) => component({ ...props, commands, store: terminalStore }),
+      size: { width: 700, height: 350 },
+      title: "Terminal",
+      type: "TERMINAL",
+      events: {
+        onResize: (dimensions) => terminalStore.dispatch("ui.resizeWidth", dimensions.size.width),
+      },
     },
-  },
+  };
 };
 
-export default {
-  ...terminal,
-  addCommands: (commands) => {
-    return { ...terminal, configs: { ...terminal.configs, component: (props) => component({ ...props, commands }) } };
-  },
+export default (options = {}) => {
+  const { commands = {} } = options;
+  return Object.values(commands).length > 0 ? () => getTool(commands) : getTool();
 };

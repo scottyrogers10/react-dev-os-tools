@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
-import { View } from "@library/ui";
-import { useStore } from "@@terminal/tools/hooks";
-import store from "@@terminal/store";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { StoreContext, View } from "@library/ui";
+import { useStore } from "@library/hooks";
 import { executeCommand, setTextAreaHeight } from "./helpers";
 import styles from "./styles";
 
@@ -9,7 +8,9 @@ const CommandLine = ({ style }) => {
   const textAreaRef = useRef(null);
   const hiddenTextAreaRef = useRef(null);
   const [value, setValue] = useState("");
-  const { width } = useStore((store) => store.getState("ui"));
+
+  const store = useContext(StoreContext);
+  const { width } = useStore(store)((store) => store.getState("ui"));
 
   const handleChange = (event) => {
     const trimmedInput = event.target.value.replace(/^\s+/g, "");
@@ -19,7 +20,7 @@ const CommandLine = ({ style }) => {
   const handleKeyDown = (event) => {
     if (event.keyCode === 13) {
       store.dispatch("history.addLine", { type: "COMMAND", value });
-      executeCommand(value);
+      executeCommand(value, store);
       setValue("");
       event.preventDefault();
     }

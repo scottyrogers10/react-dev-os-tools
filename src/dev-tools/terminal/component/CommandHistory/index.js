@@ -1,11 +1,13 @@
-import React from "react";
-import { View } from "@library/ui";
-import { useStore } from "@@terminal/tools/hooks";
+import React, { useContext } from "react";
+import { StoreContext, View } from "@library/ui";
+import { useStore } from "@library/hooks";
 import HistoryItem from "./HistoryItem";
 import styles from "./styles";
 
 const CommandHistory = ({ style }) => {
-  const history = useStore((store) => store.getState("history"));
+  const store = useContext(StoreContext);
+  const history = useStore(store)((store) => store.getState("history"));
+
   return (
     <View style={{ ...styles.view, ...style }}>
       {history.map((item, index) => {
