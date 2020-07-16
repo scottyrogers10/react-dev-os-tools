@@ -30,7 +30,7 @@ export default {
     position: "absolute",
     top: 0,
     left: 0,
-    sIndex: "-1000",
+    zIndex: "-1000",
     minHeight: "0px",
     maxHeight: "none",
     height: "0px",
