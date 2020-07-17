@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { StoreContext, View } from "@library/ui";
-import { useStore } from "@library/hooks";
-import { executeCommand, setTextAreaHeight } from "./helpers";
+import { useMergeState, useStore } from "@library/hooks";
+import { handleEnterKeyPress, handleHistoryNavigation, handleLeftArrowKeyPress, keyTypesMap as key, setTextAreaHeight } from "./helpers";
 import styles from "./styles";
 
 const CommandLine = ({ style }) => {
   const textAreaRef = useRef(null);
   const hiddenTextAreaRef = useRef(null);
+  const [navigation, setNavigation] = useMergeState({ cachedVal: "", offset: -1 });
   const [value, setValue] = useState("");
 
   const store = useContext(StoreContext);
@@ -18,30 +19,16 @@ const CommandLine = ({ style }) => {
   };
 
   const handleKeyDown = (event) => {
-    if (event.keyCode === 13) {
-      store.dispatch("history.addLine", { type: "COMMAND", value });
-      executeCommand(value, store);
-      setValue("");
-      event.preventDefault();
-    }
-
-    if (event.keyCode === 37) {
-      textAreaRef.current.selectionStart < 9 && (textAreaRef.current.selectionStart = 8) && event.preventDefault();
-      textAreaRef.current.selectionEnd < 9 && (textAreaRef.current.selectionEnd = 8) && event.preventDefault();
-    }
-
-    if (event.keyCode === 38 || event.keyCode === 40) {
-      event.preventDefault();
-    }
-
-    if (event.metaKey) {
-      event.preventDefault();
-    }
+    if (event.metaKey) event.preventDefault();
+    if (event.keyCode === key.ENTER) handleEnterKeyPress({ event, setNavigation, setValue, store, value });
+    if (event.keyCode === key.LEFT_ARROW) handleLeftArrowKeyPress(event, textAreaRef);
+    if (event.keyCode === key.UP_ARROW || event.keyCode === key.DOWN_ARROW)
+      handleHistoryNavigation({ event, navigation, setNavigation, setValue, value });
   };
 
   const handleMouseDown = (event) => {
-    event.preventDefault();
     textAreaRef.current.focus();
+    event.preventDefault();
   };
 
   const handlePromptClick = () => {
@@ -53,9 +40,11 @@ const CommandLine = ({ style }) => {
   }, [value, width]);
 
   useEffect(() => {
-    textAreaRef.current.focus();
-    textAreaRef.current.selectionStart = 8;
-    textAreaRef.current.selectionEnd = 8;
+    if (textAreaRef.current) {
+      textAreaRef.current.focus();
+      textAreaRef.current.selectionStart = 8;
+      textAreaRef.current.selectionEnd = 8;
+    }
   }, []);
 
   return (
