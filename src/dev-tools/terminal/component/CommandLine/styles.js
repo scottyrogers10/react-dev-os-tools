@@ -1,3 +1,5 @@
+import { css } from "@library/styles";
+
 export default {
   view: {
     position: "relative",
@@ -8,6 +10,7 @@ export default {
     position: "absolute",
     top: 0,
     left: 0,
+    ...css.userSelect.none,
   },
   textArea: {
     height: "21px",
