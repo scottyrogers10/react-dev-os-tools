@@ -1,3 +1,4 @@
+import notepad from "./notepad";
 import terminal from "./terminal";
 
-export { terminal };
+export { notepad, terminal };

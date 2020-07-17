@@ -17,6 +17,7 @@
         "alias": {
           "@devTools": "./src/dev-tools",
           "@library": "./src/library",
+          "@@notepad": "./src/dev-tools/notepad",
           "@@terminal": "./src/dev-tools/terminal"
         }
       }
