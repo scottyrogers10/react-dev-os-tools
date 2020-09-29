@@ -1,7 +1,7 @@
 {
   "name": "react-dev-os-tools",
   "author": "Scotty Rogers",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "A collection of official tools built for React DevOS.",
   "license": "ISC",
   "repository": {
@@ -41,6 +41,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "css-loader": "^3.0.0",
     "style-loader": "^0.23.1",
+    "url-loader": "^4.1.0",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5"
   }
