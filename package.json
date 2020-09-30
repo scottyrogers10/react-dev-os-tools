@@ -1,7 +1,7 @@
 {
   "name": "react-dev-os-tools",
   "author": "Scotty Rogers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A collection of official tools built for React DevOS.",
   "license": "ISC",
   "repository": {
@@ -22,7 +22,8 @@
   "main": "./dist/bundle.js",
   "scripts": {
     "start": "webpack --watch --config webpack.config.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode production",
+    "prepublishOnly": "webpack --config webpack.config.js --mode production"
   },
   "dependencies": {
     "generic-data-chamber": "^6.0.2"
