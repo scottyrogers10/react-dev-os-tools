@@ -44,5 +44,5 @@ module.exports = {
     react: "react",
     reactDOM: "react-dom",
   },
-  // devtool: "inline-source-map",
+  devtool: "inline-source-map",
 };

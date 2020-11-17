@@ -15,8 +15,10 @@
       {
         "root": ["./src/"],
         "alias": {
+          "@devHocs": "./src/dev-hocs",
           "@devTools": "./src/dev-tools",
           "@library": "./src/library",
+          "@@componentEditor": "./src/dev-tools/component-editor",
           "@@notepad": "./src/dev-tools/notepad",
           "@@tasks": "./src/dev-tools/tasks",
           "@@terminal": "./src/dev-tools/terminal"
