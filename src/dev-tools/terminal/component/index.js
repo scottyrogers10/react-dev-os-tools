@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { StoreContext, View } from "@library/ui";
+import { View } from "@library/components";
+import { StoreContext } from "@library/ui";
 import CommandHistory from "./CommandHistory";
 import CommandLine from "./CommandLine";
 import styles from "./styles";

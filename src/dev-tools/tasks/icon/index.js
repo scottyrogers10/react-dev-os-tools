@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "@library/ui";
+import { View } from "@library/components";
 import icon from "../assets/icon-128x128.png";
 import styles from "./styles";
 

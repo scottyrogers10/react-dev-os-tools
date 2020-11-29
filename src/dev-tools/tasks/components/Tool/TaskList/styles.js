@@ -6,7 +6,7 @@ export default {
     overflowY: "auto",
     overflowX: "hidden",
   },
-  item: (isOdd) => {
+  task: (isOdd) => {
     return (
       isOdd && {
         backgroundColor: colors.gray[800],

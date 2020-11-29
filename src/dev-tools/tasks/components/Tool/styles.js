@@ -3,7 +3,6 @@ import { colors } from "@library/styles";
 export default {
   view: {
     display: "flex",
-    flexDirection: "column",
     height: "100%",
     width: "100%",
     overflow: "hidden",
@@ -17,5 +16,9 @@ export default {
     fontSize: "12px",
     fontFamily:
       "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+  },
+  tabs: {
+    width: "200px",
+    height: "100%",
   },
 };

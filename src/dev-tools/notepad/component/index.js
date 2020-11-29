@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View } from "@library/ui";
+import { View } from "@library/components";
 import { Tabs, TextArea } from "./children";
 import styles from "./styles";
 

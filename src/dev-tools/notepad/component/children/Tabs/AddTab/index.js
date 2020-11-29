@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "@library/ui";
+import { View } from "@library/components";
 import styles from "./styles";
 
 const AddTab = ({ style }) => {

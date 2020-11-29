@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { StoreContext, View } from "@library/ui";
+import { View } from "@library/components";
+import { StoreContext } from "@library/ui";
 import { useMergeState, useStore } from "@library/hooks";
 import { handleEnterKeyPress, handleHistoryNavigation, handleLeftArrowKeyPress, keyTypesMap as key, setTextAreaHeight } from "./helpers";
 import styles from "./styles";
