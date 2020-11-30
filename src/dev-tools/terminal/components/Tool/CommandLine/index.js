@@ -1,8 +1,14 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { View } from "@library/components";
-import { StoreContext } from "@library/ui";
 import { useMergeState, useStore } from "@library/hooks";
-import { handleEnterKeyPress, handleHistoryNavigation, handleLeftArrowKeyPress, keyTypesMap as key, setTextAreaHeight } from "./helpers";
+import { StoreContext } from "@@terminal/contexts";
+import {
+  handleEnterKeyPress,
+  handleHistoryNavigation,
+  handleLeftArrowKeyPress,
+  keyTypesMap as key,
+  setTextAreaHeight,
+} from "./helpers";
 import styles from "./styles";
 
 const CommandLine = ({ style }) => {

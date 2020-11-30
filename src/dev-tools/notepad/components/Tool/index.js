@@ -3,7 +3,7 @@ import { View } from "@library/components";
 import { Tabs, TextArea } from "./children";
 import styles from "./styles";
 
-const Notepad = ({ style }) => {
+const Tool = ({ style }) => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
@@ -14,8 +14,8 @@ const Notepad = ({ style }) => {
   );
 };
 
-Notepad.defaultProps = {
+Tool.defaultProps = {
   style: {},
 };
 
-export default Notepad;
+export default Tool;

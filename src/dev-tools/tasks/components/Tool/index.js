@@ -10,7 +10,7 @@ const Tool = ({ style, tabs }) => {
   return (
     <View style={{ ...styles.view, ...style }}>
       <Tabs style={styles.tabs} selectedIndex={selectedIndex} tabs={tabs} setSelectedIndex={setSelectedIndex} />
-      <TaskList tasks={tabs[selectedIndex].tasks} />
+      <TaskList tasks={tabs[selectedIndex]?.tasks} />
     </View>
   );
 };

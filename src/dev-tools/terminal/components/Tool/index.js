@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { View } from "@library/components";
-import { StoreContext } from "@library/ui";
+import { StoreContext } from "@@terminal/contexts";
 import CommandHistory from "./CommandHistory";
 import CommandLine from "./CommandLine";
 import styles from "./styles";
 
-const Terminal = ({ commands, store, style }) => {
+const Tool = ({ commands, store, style }) => {
   useEffect(() => {
     store.dispatch("commands.add", commands);
   }, []);
@@ -20,10 +20,10 @@ const Terminal = ({ commands, store, style }) => {
   );
 };
 
-Terminal.defaultProps = {
+Tool.defaultProps = {
   commands: {},
   store: {},
   style: {},
 };
 
-export default Terminal;
+export default Tool;

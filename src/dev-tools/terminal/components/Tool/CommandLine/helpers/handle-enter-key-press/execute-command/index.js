@@ -1,4 +1,4 @@
-import includedCommands from "@@terminal/included-commands";
+import internalCommands from "@@terminal/commands";
 import print from "./print";
 
 export default (input, store) => {
@@ -6,6 +6,6 @@ export default (input, store) => {
   const formattedInput = input.trim();
   const [command] = formattedInput.split(" ");
 
-  const allCommands = { ...externalCommands, ...includedCommands };
+  const allCommands = { ...externalCommands, ...internalCommands };
   allCommands[command]({ input: formattedInput, print: print(store) });
 };

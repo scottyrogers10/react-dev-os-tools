@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { View } from "@library/components";
-import { StoreContext } from "@library/ui";
 import { useStore } from "@library/hooks";
+import { StoreContext } from "@@terminal/contexts";
 import HistoryItem from "./HistoryItem";
 import styles from "./styles";
 
