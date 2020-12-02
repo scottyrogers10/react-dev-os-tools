@@ -3,8 +3,8 @@ import { Text, View } from "@library/components";
 import ExecuteButton from "./ExecuteButton";
 import styles from "./styles";
 
-const Task = ({ style, task }) => {
-  const handleClick = () => task.execute();
+const Task = ({ onExecute, style, task }) => {
+  const handleClick = () => task.execute(onExecute());
 
   return (
     <View style={{ ...styles.view, ...style }}>
@@ -18,6 +18,7 @@ const Task = ({ style, task }) => {
 };
 
 Task.defaultProps = {
+  onExecute: () => {},
   style: {},
   task: {},
 };
