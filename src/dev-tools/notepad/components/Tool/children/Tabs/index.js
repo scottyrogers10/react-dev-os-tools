@@ -4,21 +4,21 @@ import Tab from "./Tab";
 import styles from "./styles";
 
 const Tabs = ({ selectedTab, setSelectedTab, style }) => {
-  const tabs = [];
+	const tabs = [];
 
-  return (
-    <View style={{ ...styles.view, ...style }}>
-      {tabs.map((tab, index) => {
-        return <Tab key={`TAB_${index}`} {...tab} />;
-      })}
-    </View>
-  );
+	return (
+		<View style={{ ...styles.view, ...style }}>
+			{tabs.map((tab, index) => {
+				return <Tab key={`TAB_${index}`} {...tab} />;
+			})}
+		</View>
+	);
 };
 
 Tabs.defaultProps = {
-  selectedTab: 0,
-  setSelectedTab: () => {},
-  style: {},
+	selectedTab: 0,
+	setSelectedTab: () => {},
+	style: {},
 };
 
 export default Tabs;

@@ -5,5 +5,5 @@ import history from "./history";
 import ui from "./ui";
 
 export default {
-  create: () => new Store({ name: "terminal", types: { commands, history, ui } }),
+	create: () => new Store({ name: "terminal", types: { commands, history, ui } }),
 };

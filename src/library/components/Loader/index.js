@@ -4,20 +4,20 @@ import styles from "./styles";
 import "./stylesheet.css";
 
 const Loader = ({ style }) => {
-  return (
-    <View style={{ ...styles.view, ...style }}>
-      <div id="dev-os-ring">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </View>
-  );
+	return (
+		<View style={{ ...styles.view, ...style }}>
+			<div id="dev-os-ring">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</View>
+	);
 };
 
 Loader.defaultProps = {
-  style: {},
+	style: {},
 };
 
 export default Loader;

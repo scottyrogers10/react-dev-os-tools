@@ -1,9 +1,9 @@
 export default (textAreaRef, hiddenTextAreaRef) => {
-  const textArea = textAreaRef.current;
-  const hiddenTextArea = hiddenTextAreaRef.current;
+	const textArea = textAreaRef.current;
+	const hiddenTextArea = hiddenTextAreaRef.current;
 
-  if (textArea && hiddenTextArea) {
-    const scrollHeight = hiddenTextArea.scrollHeight;
-    textArea.style.height !== scrollHeight && (textArea.style.height = `${scrollHeight}px`);
-  }
+	if (textArea && hiddenTextArea) {
+		const scrollHeight = hiddenTextArea.scrollHeight;
+		textArea.style.height !== scrollHeight && (textArea.style.height = `${scrollHeight}px`);
+	}
 };

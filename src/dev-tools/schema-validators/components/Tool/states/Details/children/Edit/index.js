@@ -3,11 +3,11 @@ import { View } from "@library/components";
 import styles from "./styles";
 
 const Edit = ({ style }) => {
-  return <View style={{ ...styles.view, ...style }}></View>;
+	return <View style={{ ...styles.view, ...style }}></View>;
 };
 
 Edit.defaultProps = {
-  style: {},
+	style: {},
 };
 
 export default Edit;

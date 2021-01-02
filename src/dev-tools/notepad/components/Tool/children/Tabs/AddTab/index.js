@@ -3,11 +3,11 @@ import { View } from "@library/components";
 import styles from "./styles";
 
 const AddTab = ({ style }) => {
-  return <View style={{ ...styles.view, ...style }}>+</View>;
+	return <View style={{ ...styles.view, ...style }}>+</View>;
 };
 
 AddTab.defaultProps = {
-  style: {},
+	style: {},
 };
 
 export default AddTab;

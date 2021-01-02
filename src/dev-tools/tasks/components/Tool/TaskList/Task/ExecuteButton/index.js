@@ -3,16 +3,16 @@ import { View } from "@library/components";
 import styles from "./styles";
 
 const ExecuteButton = ({ onClick, style }) => {
-  return (
-    <View style={{ ...styles.view, ...style }} onClick={onClick}>
-      Run
-    </View>
-  );
+	return (
+		<View style={{ ...styles.view, ...style }} onClick={onClick}>
+			Run
+		</View>
+	);
 };
 
 ExecuteButton.defaultProps = {
-  onClick: () => {},
-  style: {},
+	onClick: () => {},
+	style: {},
 };
 
 export default ExecuteButton;

@@ -1,6 +1,6 @@
 export default {
-  view: {
-    overflowY: "auto",
-    overflowX: "hidden",
-  },
+	view: {
+		overflowY: "auto",
+		overflowX: "hidden",
+	},
 };

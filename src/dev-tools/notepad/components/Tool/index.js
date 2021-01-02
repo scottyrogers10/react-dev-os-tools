@@ -4,18 +4,18 @@ import { Tabs, TextArea } from "./children";
 import styles from "./styles";
 
 const Tool = ({ style }) => {
-  const [selectedTab, setSelectedTab] = useState(0);
+	const [selectedTab, setSelectedTab] = useState(0);
 
-  return (
-    <View style={{ ...styles.view, ...style }}>
-      <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
-      <TextArea selectedTab={selectedTab} />
-    </View>
-  );
+	return (
+		<View style={{ ...styles.view, ...style }}>
+			<Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+			<TextArea selectedTab={selectedTab} />
+		</View>
+	);
 };
 
 Tool.defaultProps = {
-  style: {},
+	style: {},
 };
 
 export default Tool;

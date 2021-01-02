@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 export default (fn) => {
-  useEffect(() => {
-    return fn;
-  }, []);
+	useEffect(() => {
+		return fn;
+	}, []);
 };

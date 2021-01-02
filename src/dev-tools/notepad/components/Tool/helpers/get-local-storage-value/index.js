@@ -1,6 +1,6 @@
 export default () => {
-  const notepadStorage = JSON.parse(localStorage.getItem("dev-os-notepad")) || {};
-  const notes = notepadStorage.notes || [];
+	const notepadStorage = JSON.parse(localStorage.getItem("dev-os-notepad")) || {};
+	const notes = notepadStorage.notes || [];
 
-  return notes;
+	return notes;
 };

@@ -3,12 +3,12 @@ import { View } from "@library/components";
 import styles from "./styles";
 
 const Logs = ({ data, style }) => {
-  return <View style={{ ...styles.view, ...style }}>Logs</View>;
+	return <View style={{ ...styles.view, ...style }}>Logs</View>;
 };
 
 Logs.defaultProps = {
-  data: {},
-  style: {},
+	data: {},
+	style: {},
 };
 
 export default Logs;
