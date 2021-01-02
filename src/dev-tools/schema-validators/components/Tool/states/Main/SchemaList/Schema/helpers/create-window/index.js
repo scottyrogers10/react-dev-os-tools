@@ -1,4 +1,4 @@
-import { Details } from "@@schemaValidators/components/Tool/windows";
+import { Details } from "@@schemaValidators/components/Tool/states";
 
 export default ({ devOS, event, schema }) => {
   const position = {
@@ -11,7 +11,7 @@ export default ({ devOS, event, schema }) => {
     minSize: { height: 150, width: 550 },
     position,
     size: { height: 300, width: 600 },
-    title: schema.name,
+    title: `${schema.name} - Details`,
     type: "SCHEMA_VALIDATORS_DETAILS",
   });
 };

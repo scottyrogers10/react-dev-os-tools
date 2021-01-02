@@ -1,4 +1,4 @@
-import { colors } from "@library/styles";
+import { colors, css } from "@library/styles";
 
 export default {
   view: {
@@ -7,5 +7,6 @@ export default {
     borderRadius: "4px",
     fontWeight: 700,
     padding: "0px 8px",
+    ...css.userSelect.none,
   },
 };

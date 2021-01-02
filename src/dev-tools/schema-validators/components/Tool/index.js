@@ -1,3 +1,3 @@
-import { Main } from "./windows";
+import { Main } from "./states";
 
 export default Main;
