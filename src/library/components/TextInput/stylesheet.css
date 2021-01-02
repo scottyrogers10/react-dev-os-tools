@@ -1,0 +1,8 @@
+#dev-os-text-input:focus {
+	outline: none;
+}
+
+#dev-os-text-input {
+	border: none;
+	background-color: transparent;
+}

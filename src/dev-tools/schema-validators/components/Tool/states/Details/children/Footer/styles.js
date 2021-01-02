@@ -6,6 +6,7 @@ export default {
 		display: "flex",
 		backgroundColor: colors.gray[850],
 		height: "56px",
+		minHeight: "56px",
 		padding: "0 16px",
 	},
 	executeButton: {
