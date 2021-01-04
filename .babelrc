@@ -18,6 +18,7 @@
           "@devTools": "./src/dev-tools",
           "@library": "./src/library",
           "@@notepad": "./src/dev-tools/notepad",
+          "@@schemaValidators": "./src/dev-tools/schema-validators",
           "@@tasks": "./src/dev-tools/tasks",
           "@@terminal": "./src/dev-tools/terminal"
         }

@@ -1,9 +1,9 @@
 import add from "./add";
 
 export default {
-  actions: {
-    add,
-  },
-  name: "commands",
-  state: {},
+	actions: {
+		add,
+	},
+	name: "commands",
+	state: {},
 };

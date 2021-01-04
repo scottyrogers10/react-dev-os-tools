@@ -3,25 +3,25 @@ import { getLocalStorageValue, saveToLocalStorage } from "../../helpers";
 import styles from "./styles";
 
 const TextArea = ({ selectedTab, style }) => {
-  const [value, setValue] = useState("");
+	const [value, setValue] = useState("");
 
-  const handleChange = (event) => {
-    const val = event.target.value;
-    setValue(val);
-    saveToLocalStorage(selectedTab, val);
-  };
+	const handleChange = (event) => {
+		const val = event.target.value;
+		setValue(val);
+		saveToLocalStorage(selectedTab, val);
+	};
 
-  useEffect(() => {
-    const storedVal = getLocalStorageValue()[selectedTab] || "";
-    setValue(storedVal);
-  }, [selectedTab]);
+	useEffect(() => {
+		const storedVal = getLocalStorageValue()[selectedTab] || "";
+		setValue(storedVal);
+	}, [selectedTab]);
 
-  return <textarea style={{ ...styles.textarea, ...style }} onChange={handleChange} spellCheck={false} value={value} />;
+	return <textarea style={{ ...styles.textarea, ...style }} onChange={handleChange} spellCheck={false} value={value} />;
 };
 
 TextArea.defaultProps = {
-  selectedTab: 0,
-  style: {},
+	selectedTab: 0,
+	style: {},
 };
 
 export default TextArea;

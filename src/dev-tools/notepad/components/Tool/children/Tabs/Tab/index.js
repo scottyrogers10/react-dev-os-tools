@@ -3,13 +3,13 @@ import { View } from "@library/components";
 import styles from "./styles";
 
 const Tab = ({ index, style, title }) => {
-  return <View style={{ ...styles.view, ...style }}>{title}</View>;
+	return <View style={{ ...styles.view, ...style }}>{title}</View>;
 };
 
 Tab.defaultProps = {
-  index: 0,
-  style: {},
-  title: "",
+	index: 0,
+	style: {},
+	title: "",
 };
 
 export default Tab;

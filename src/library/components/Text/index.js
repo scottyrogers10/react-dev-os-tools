@@ -1,16 +1,16 @@
 import React from "react";
 
 const Text = (props) => {
-  return (
-    <div style={props.style} title={props.title}>
-      {props.children}
-    </div>
-  );
+	return (
+		<div style={props.style} title={props.title}>
+			{props.children}
+		</div>
+	);
 };
 
 Text.defaultProps = {
-  children: null,
-  title: null,
+	children: null,
+	title: null,
 };
 
 export default Text;
