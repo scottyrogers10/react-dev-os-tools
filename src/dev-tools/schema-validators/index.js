@@ -9,7 +9,7 @@ export default (options) => {
 		description: "List of schemas to be validated on execution.",
 		icon: Icon,
 		label: "Schema Validators",
-		version: "1.0.0",
+		version: "0.1.0",
 		window: {
 			component: (props) => Tool({ ...props, tabs }),
 			minSize: { height: 150, width: 550 },
