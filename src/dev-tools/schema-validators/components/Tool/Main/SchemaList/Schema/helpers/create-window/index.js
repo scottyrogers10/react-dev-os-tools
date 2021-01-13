@@ -1,4 +1,4 @@
-import { Details } from "@@schemaValidators/components/Tool/states";
+import { Details } from "@@schemaValidators/components/Tool";
 
 export default ({ devOS, event, schema }) => {
 	const position = {
