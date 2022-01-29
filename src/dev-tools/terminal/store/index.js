@@ -1,4 +1,4 @@
-import { Store } from "generic-data-chamber";
+import { Store } from "data-chamber";
 // Store Types //
 import commands from "./commands";
 import history from "./history";
